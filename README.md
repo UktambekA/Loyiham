@@ -39,9 +39,3 @@ Loyihaga hissa qo'shishni istasangiz:
 5. Pull Request yarating
 
 
-
-## 📬 Aloqa
-
-[Sizning ismingiz] - [@sizning_twitter](https://twitter.com/sizning_twitter) - email@example.com
-
-Loyiha havolasi: [https://github.com/sizning-username/qimmatbaho-olmoslar-tahlili](https://github.com/sizning-username/qimmatbaho-olmoslar-tahlili)

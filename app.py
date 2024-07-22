@@ -35,9 +35,12 @@ category = st.sidebar.selectbox(
 
 if category == "Data set haqida umumiy ma'lumot":
     
-    st.header("Qimmmatbaho olmoslar")
+    st.header("Qimmatbaho olmoslar")
     st.write("Bu qimmatbaho toshlar ma'lumotlar to'plami. Ma'lumotlar quyidagi ustunlarni o'z ichiga oladi: `carat`, `cut`, `color`, `clarity`, `price`, `x`, `y`, `z`, `country`, `years`, `sold`.")
     st.write(df)
+    st.write("Qator va Ustunlar soni: ")
+    st.write(df.shape)
+    
     st.image("https://i.pinimg.com/originals/0b/46/97/0b4697db0d8b95ebfff5c5f4ff8ee217.jpg")
 elif category == "Statistika":
     st.write('## Descriptive Statistics')
@@ -55,7 +58,6 @@ elif category == "Statistika":
 elif category == "Grafiklar":
     
     st.header("Filtrlar")
-# Filterlar
     if 'carat' in df.columns:
         carat_min, carat_max = float(df['carat'].min()), float(df['carat'].max())
         selected_carat = st.sidebar.slider('Carat', carat_min, carat_max, (carat_min, carat_max))
@@ -80,7 +82,6 @@ elif category == "Grafiklar":
         years = df['years'].unique().tolist()
         selected_years = st.sidebar.multiselect('Years', years, years)
 
-    # Filtrlangan ma'lumotlar
     filtered_data = df[
         (df['carat'] >= selected_carat[0]) & (df['carat'] <= selected_carat[1]) &
         (df['cut'].isin(selected_cuts)) &
@@ -223,7 +224,6 @@ elif category == "Grafiklar":
 
         # Statistikalarni ko'rsatish
         col1, col2 = st.columns(2)
-
         with col1:
             st.write("To'ldirishdan oldingi statistika:")
             st.dataframe(df_original[numeric_columns].describe())

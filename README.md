@@ -38,4 +38,5 @@ Loyihaga hissa qo'shishni istasangiz:
 4. Branchni push qiling (`git push origin feature/AmazingFeature`)
 5. Pull Request yarating
 
-
+## Streamlit ilova uchun havola:
+https://uktambeka-loyiham-app-zjmyb2.streamlit.app/
